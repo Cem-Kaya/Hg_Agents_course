@@ -6,17 +6,13 @@
 
 ollama serve
 
-markdown
-Copy
-Edit
+
 
 2. Install dependencies:
 
 pip install smolagents[toolkit] litellm
 
-markdown
-Copy
-Edit
+
 
 3. Edit your `gaia_tasks.jsonl` file as needed.
 
@@ -30,9 +26,7 @@ Edit
 5. Run GAIA batch evaluation:
 python evaluate.py
 
-markdown
-Copy
-Edit
+
 
 ## Directory Structure
 
