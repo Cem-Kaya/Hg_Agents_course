@@ -21,10 +21,11 @@ def main():
 
     # Setup model and agent
     model = LiteLLMModel(
-    model_id="ollama_chat/llama3:8b",     # <- Update this line
-    api_base="http://localhost:11434",    # Ollama's default API address
-    num_ctx=8192                          # or lower if needed
+    model_id="ollama_chat/gemma3:12b",   # ← new tag
+    api_base="http://localhost:11434",
+    num_ctx=8192,
     )
+    
     
     agent = CodeAgent(
         tools=build_tools(),

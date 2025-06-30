@@ -1,6 +1,2 @@
 {"task_id": "6af95c8f-8cbf-4c12-b02c-f9a23cc1ecb9", "model_answer": "ERROR", "reasoning_trace": "'NoneType' object has no attribute 'strip'"}
 {"task_id": "c80ed443-b494-4e86-bec8-10ecb41c2326", "model_answer": "ERROR", "reasoning_trace": "'NoneType' object has no attribute 'strip'"}
-{"task_id": "e14448e9-5243-4b07-86e1-22e657f96bcf", "model_answer": "The image is part of the GAIA 2023 benchmark for General AI Assistants.", "reasoning_trace": ""}
-{"task_id": "198ffd8f-6041-458d-bacc-fe49872cfa43", "model_answer": "<think>\n\n</think>\n\n**Final Answer:**\nUnable to read the file under current constraints.", "reasoning_trace": ""}
-{"task_id": "6583799b-573a-4e95-8b28-4f0397bd45c2", "model_answer": "ERROR", "reasoning_trace": "'NoneType' object has no attribute 'strip'"}
-{"task_id": "12a682d7-8e8e-4d4c-8102-a97628027441", "model_answer": "ERROR", "reasoning_trace": "'NoneType' object has no attribute 'strip'"}
