@@ -21,10 +21,11 @@ def main():
 
     # Setup model and agent
     model = LiteLLMModel(
-        model_id="ollama_chat/deepseek-r1:14b",
-        api_base="http://localhost:11434",
-        num_ctx=8192
+    model_id="ollama_chat/llama3:8b",     # <- Update this line
+    api_base="http://localhost:11434",    # Ollama's default API address
+    num_ctx=8192                          # or lower if needed
     )
+    
     agent = CodeAgent(
         tools=build_tools(),
         model=model,
@@ -44,9 +45,9 @@ def main():
             else:
                 prompt = question
 
-            # Run agent, get answer and reasoning
             try:
-                result = agent.run(prompt, return_reasoning=True)
+                result = agent.run(prompt)
+                # Try to extract answer and reasoning if dict, else just use result as answer
                 if isinstance(result, dict):
                     answer = result.get("final_answer") or result.get("answer") or ""
                     reasoning = result.get("reasoning") or ""

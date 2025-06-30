@@ -1,25 +1,19 @@
-from smolagents import (
-    DuckDuckGoSearchTool, 
-    GoogleSearchTool,
-    WikipediaSearchTool,
-    VisitWebpageTool,
-    PythonInterpreterTool,
-    SpeechToTextTool,
-)
+from smolagents import PythonInterpreterTool, DuckDuckGoSearchTool
+
+class PythonFileReaderTool:
+    name = "read_file"
+    description = "Reads a file from disk and returns its content"
+    def __call__(self, file_path):
+        try:
+            with open(file_path, "r", encoding="utf-8") as f:
+                return f.read()
+        except Exception as e:
+            return f"ERROR: {e}"
 
 def build_tools():
-    tools = []
-    tool_classes = [
-        DuckDuckGoSearchTool,
-        GoogleSearchTool,
-        WikipediaSearchTool,
-        VisitWebpageTool,
-        PythonInterpreterTool,
-        SpeechToTextTool,
+    return [
+        DuckDuckGoSearchTool(),
+        PythonInterpreterTool(),
+        PythonFileReaderTool(),
+        # Add other tools as needed
     ]
-    for tool_cls in tool_classes:
-        try:
-            tools.append(tool_cls())
-        except Exception as e:
-            print(f"Tool {tool_cls.__name__} could not be loaded: {e}")
-    return tools
